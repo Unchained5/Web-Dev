@@ -1,8 +1,15 @@
-body { background-color: #FCEBB6;
-       color: #221811; font-family: Tahoma, Helvetica, sans-serif;}
-header { background-color: #D2B48C; color: #8C3826; text-align: center;}
-h1 {line-height: 2;}
+body { background-color: #FCEBB6; background-image: url("../javajam_resources/fadedroad50.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;  color: #221811; font-family: Tahoma, Helvetica, sans-serif;}
+header { background-color: #D2B48C; color: #8C3826; text-align: center; padding-top: 5px; padding-bottom: 5px;}
+h1 {font-size: 3em;}
 h2 {color: #8C3826;}
-nav {text-align: center; font-weight: bold;}
-footer {color: #8C3826; text-align: center; font-size: .60em; font-style: italic;}
-#wrapper {width: 80%; background-color: #FEFAEB; margin-right: auto; margin-left: auto;}
+h3 {color: #8C3826;}
+dt {color: #8C3826;}
+h4 {background-color: #D2B48C; font-size: 1.2em; padding-left: .5em; padding-bottom: .25em;}
+main {padding-left: 2em; padding-right: 2em; padding-bottom: 2em;}
+nav {text-align: center; font-weight: bold; font-size: 1.5em; padding-top: 5px; padding-bottom: 5px;}
+nav a {text-decoration: none;}
+img {padding-left: 10px; padding-right: 10px;}
+.details {padding-left: 20%; padding-right: 20%;}
+#homehero {height: 300px; background-repeat: no-repeat; background-size: cover; background-image: url("../javajam_resources/hero.jpg");}
+footer {background-color: #D2B48C; color: #8C3826; text-align: center; font-size: .60em; font-style: italic; padding: 1em; border-top:2px solid #8C3826 ;}
+#wrapper {width: 80%; background-color: #FEFAEB; margin-right: auto; margin-left: auto; min-width: 900px; max-width: 1280px; box-shadow: 2px 2px 4px #8C3826;}
