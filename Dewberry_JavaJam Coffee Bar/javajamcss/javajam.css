@@ -1,11 +1,11 @@
 * { box-sizing: border-box; }
-body { background-color: #FCEBB6; background-image: url("../javajam_resources/fadedroad50.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;  color: #221811; font-family: Tahoma, Helvetica, sans-serif;}
-header { background-color: #D2B48C; color: #8C3826; background-image: url("../javajam_resources/coffeelogo.jpg"); padding-top: 5px; padding-bottom: 5px; background-repeat: no-repeat; padding-left: 240px;}
+body { background-color: #FCEBB6; background-repeat: no-repeat; background-attachment: fixed; background-size: cover;  color: #221811; font-family: Tahoma, Helvetica, sans-serif; margin: 0; background-color: #D2B48C;}
+header { background-color: #D2B48C; color: #8C3826; background-image: url("../javajam_resources/cup.jpg"); padding-top: 5px; padding-bottom: 5px; background-repeat: no-repeat; padding-left: 105px; height: 128px}
 header a {text-decoration: none;}
 header a:link {color: #231814;}
 header a:hover {color: #FEF6C2}
 header a:visited {color: #231814;}
-h1 {font-size: 3em;}
+h1 {font-size: 2em;}
 h2 {color: #8C3826; padding-left: 3em; padding-right: 2em;}
 h3 {color: #8C3826; padding-left: 3em; padding-right: 2em;}
 dt {color: #8C3826;}
@@ -14,21 +14,60 @@ p {padding-left: 3em; padding-right: 2em;}
 div {padding-left: 3em; padding-right: 2em;}
 ul {padding-left: 3em; padding-right: 2em;}
 dl {padding-left: 3em; padding-right: 2em;}
-main {padding-left: 0; padding-right: 0; padding-bottom: 2em; margin-left: 200px; padding-top: 0; overflow: auto; background-color: #FEF6C2;}
-nav {text-align: center; font-weight: bold; font-size: 1.5em; padding-top: 5px; padding-bottom: 5px; float: left; width: 200px;}
+main {padding-left: 0; padding-right: 0; padding-bottom: 2em; padding-top: 0; background-color: #FEF6C2;}
+main h3 {padding-left: 1em; padding-right: 1em;}
+main h4 {padding-left: 1em; padding-right: 1em;}
+main p {padding-left: 1em; padding-right: 1em;}
+main div {padding-left: 1em; padding-right: 1em;}
+main dl {padding-left: 1em; padding-right: 1em;}
+main ul {padding-left: 2em}
+
+nav {text-align: center; font-size: 1.5em;}
 nav a {text-decoration: none;}
 nav a:link {color: #FEF6C2;}
 nav a:hover {color: #CC9933}
 nav a:visited {color: #D2B48C;}
-nav ul {padding-left: 0; list-style-type: none;}
+nav ul {padding-left: 0; list-style-type: none; display: flex; flex-direction: column; margin: 0; padding: 0; font-size: 1.25em;}
+nav li {padding-top: .5em; padding-bottom: .5em; padding-left: 1em; padding-right: 1em; width: 100%; border-bottom: 1px solid #FEF6C2 }
 img {padding-left: 10px; padding-right: 10px;}
 .details {padding-left: 20%; padding-right: 20%; overflow: auto;}
 .clearfloat {clear: left;}
-.floatleft {float: left; padding-bottom: 2em; padding-right: 2em;}
-.onethird {float: left; width: 33%;}
-#homehero {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/hero.jpg");}
-#heromugs {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/heromugs.jpg");}
-#heroguitar {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/heroguitar.jpg");}
+#homehero {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/road.jpg");}
+#heromugs {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/threemugs.jpg");}
+#heroguitar {height: 300px; background-repeat: no-repeat; background-size: 100%; background-image: url("../javajam_resources/guitar.jpg");}
+#mobile {display: inline}
+#desktop {display: none;}
 
 footer {background-color: #D2B48C; color: #8C3826; text-align: center; font-size: .60em; font-style: italic; padding: 1em; border-top:2px solid #8C3826 ;}
-#wrapper {width: 80%; background-color: #231814; margin-right: auto; margin-left: auto; min-width: 900px; max-width: 1280px; box-shadow: 2px 2px 4px #8C3826; padding: 0;}
+#wrapper { background-color: #231814; padding: 0;}
+
+@media screen and (min-width: 600px) {
+	header {text-align: center; padding-left: 0;}
+	h1 {font-size: 3em;}
+	nav ul {display: flex; flex-wrap: nowrap; justify-content: space-around; flex-direction:row}
+	nav li {border-bottom: none;}
+	#homehero {height: 50vh; background-image: url("../javajam_resources/hero.jpg"); background-size: 100%;}
+	#heromugs {height: 50vh; background-image: url("../javajam_resources/heromugs.jpg"); background-size: 100%;}
+	#heroguitar {height: 50vh; background-image: url("../javajam_resources/heroguitar.jpg"); background-size: 100%;}
+	#flow {display: flex; flex-direction: row;}
+	#mobile {display: none;}
+	#mobile {display: inline;}
+	.details {display: flex; flex-direction: row}
+	h4 {margin-left: 10%; margin-right: 10%}
+}
+
+@media screen and (min-width: 1024px) {
+	@supports (display: grid) {
+		header {grid-area: header; background-image: url("../javajam_resources/coffeelogo.jpg")}
+		nav {grid-area: nav}
+		main {grid-area: main}
+		footer {grid-area: footer}
+		#wrapper { display: grid; grid-template:
+			"header header"
+			"nav main"
+			"footer footer"
+			/ 200px; }
+		nav ul {flex-direction: column;}
+	}
+	
+}
