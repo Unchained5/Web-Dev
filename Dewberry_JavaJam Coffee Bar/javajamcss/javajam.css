@@ -40,6 +40,10 @@ img {padding-left: 10px; padding-right: 10px;}
 
 footer {background-color: #D2B48C; color: #8C3826; text-align: center; font-size: .60em; font-style: italic; padding: 1em; border-top:2px solid #8C3826 ;}
 #wrapper { background-color: #231814; padding: 0;}
+table {margin: auto; width: 90%; border-spacing: 0;}
+td {padding: 10px;}
+th {padding: 10px;}
+tr:nth-of-type(odd) {background-color: #D2B48E}
 
 @media screen and (min-width: 600px) {
 	header {text-align: center; padding-left: 0;}
